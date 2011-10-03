@@ -20,3 +20,5 @@ INSERT INTO vare (navn, pris)
 	values ('Pepperoni Stor', '220');
 INSERT INTO vare (navn, pris)
 	values ('Pepperoni Liten', '150');
+INSERT INTO vare (navn, pris)
+	values ('Skinke og ost Medium', '170');
