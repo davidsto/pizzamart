@@ -22,7 +22,7 @@ public class Test {
 		Connection con = db.getConnection();
 		
 		
-		BufferedReader br = new BufferedReader(new FileReader("/home/sigurd/dummydata.sql"));
+		BufferedReader br = new BufferedReader(new FileReader("./src/Database/dummydata.sql"));
 		
 		ScriptRunner sr = new ScriptRunner(con, false, true);
 		sr.runScript(br);
