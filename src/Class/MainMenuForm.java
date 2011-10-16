@@ -1,4 +1,5 @@
 package Class;
+
 /*
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
@@ -37,6 +38,7 @@ public class MainMenuForm extends javax.swing.JFrame {
         adminButton = new javax.swing.JButton();
         logOutButton = new javax.swing.JButton();
         mainMenuLabel = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Hovedmeny - Max Harrys Pizza");
@@ -62,6 +64,11 @@ public class MainMenuForm extends javax.swing.JFrame {
         historyButton.setText("Historikk");
 
         adminButton.setText("Administrer");
+        adminButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                adminButtonActionPerformed(evt);
+            }
+        });
 
         logOutButton.setText("Logg ut");
         logOutButton.addActionListener(new java.awt.event.ActionListener() {
@@ -70,9 +77,20 @@ public class MainMenuForm extends javax.swing.JFrame {
             }
         });
 
-        mainMenuLabel.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
+        mainMenuLabel.setFont(new java.awt.Font("Tahoma", 0, 36));
         mainMenuLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         mainMenuLabel.setText("HOVEDMENY");
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 583, Short.MAX_VALUE)
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -81,29 +99,32 @@ public class MainMenuForm extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(378, 378, 378)
                 .addComponent(logOutButton, javax.swing.GroupLayout.DEFAULT_SIZE, 105, Short.MAX_VALUE)
-                .addGap(396, 396, 396))
+                .addGap(918, 918, 918))
             .addGroup(layout.createSequentialGroup()
                 .addGap(260, 260, 260)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(mainMenuLabel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 343, Short.MAX_VALUE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(historyButton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(kitchenButton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(newOrderButton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(134, 134, 134)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(adminButton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 105, Short.MAX_VALUE)
-                            .addComponent(editOrderButton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 105, Short.MAX_VALUE)
-                            .addComponent(driverButton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 105, Short.MAX_VALUE))))
-                .addGap(276, 276, 276))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(historyButton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(kitchenButton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(newOrderButton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(134, 134, 134)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(adminButton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 105, Short.MAX_VALUE)
+                    .addComponent(editOrderButton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 105, Short.MAX_VALUE)
+                    .addComponent(driverButton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 105, Short.MAX_VALUE))
+                .addGap(798, 798, 798))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(279, 279, 279)
+                .addComponent(mainMenuLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 343, Short.MAX_VALUE)
+                .addGap(779, 779, 779))
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(217, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(mainMenuLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(83, 83, 83)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(72, 72, 72)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(newOrderButton)
                     .addComponent(editOrderButton))
@@ -117,7 +138,9 @@ public class MainMenuForm extends javax.swing.JFrame {
                     .addComponent(adminButton))
                 .addGap(48, 48, 48)
                 .addComponent(logOutButton)
-                .addContainerGap(201, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 105, Short.MAX_VALUE)
+                .addComponent(mainMenuLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(49, 49, 49))
         );
 
         pack();
@@ -138,6 +161,12 @@ public class MainMenuForm extends javax.swing.JFrame {
     private void logOutButtonActionPerformed(java.awt.event.ActionEvent evt) {                                             
         System.exit(0);
     }                                            
+
+    private void adminButtonActionPerformed(java.awt.event.ActionEvent evt) {                                            
+        AdminForm form = new AdminForm();
+        this.setVisible(false);
+        form.setVisible(true);
+    }                                           
 
     /**
      * @param args the command line arguments
@@ -179,6 +208,7 @@ public class MainMenuForm extends javax.swing.JFrame {
     private javax.swing.JButton driverButton;
     private javax.swing.JButton editOrderButton;
     private javax.swing.JButton historyButton;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JButton kitchenButton;
     private javax.swing.JButton logOutButton;
     private javax.swing.JLabel mainMenuLabel;
