@@ -5,14 +5,18 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-
+/**
+ * Creates a connection with the database with the singleton pattern.
+ * @author Sigurd Lund and Øivind Binde
+ *
+ */
 public class Database {
 	
 	public static Database ref;
 	private Connection con=null;
     public static final String HOSTNAME = "localhost";
     public static final String USERNAME = "root";
-    public static final String DATABASE = "sigurlu_pizza";
+    public static final String DATABASE = "mydb";
     public static final String PASSWORD = "root";
 	public static final String PORT = "3306";
 	
@@ -30,7 +34,13 @@ public class Database {
 			e.printStackTrace();
 		}
 	}
-	
+	/**
+	 * Is the method for creating the database connection.
+	 * It calls the private constructor if the connection doesn't already exist.
+	 * If the connection is already made, it will just return that.
+	 * @return database
+	 * @throws SQLException
+	 */
 	public static Database getDatabase() throws SQLException{
 		if(ref == null){
 			ref = new Database();
@@ -45,15 +55,22 @@ public class Database {
 	public Connection getConnection(){
 		return con;
 	}
-	
+	/**
+	 * Takes in a String that is the query and executes it. 
+	 * @param query
+	 * @throws SQLException
+	 */
 	public void insert(String query) throws SQLException{
 		PreparedStatement sporring = con.prepareStatement(query);
 		sporring.executeUpdate();
 	}
-
+	/**
+	 * Takes in a String that is the query, and return the ResultSet of the query.
+	 * @param query
+	 * @return ResultSet
+	 * @throws SQLException
+	 */
 	public ResultSet select(String query) throws SQLException{
-		//PreparedStatement prep = null;
-		//ResultSet result = null;
 		String enavn;
 		ResultSet rs = null;
 		PreparedStatement sporring = con.prepareStatement(query);
@@ -71,10 +88,11 @@ public class Database {
 //			
 //			
 //		}
-		while(rs.next()){
-			enavn = rs.getString("etternavn");
-			System.out.println(enavn);
-		}
+//		while(rs.next()){
+//			enavn = rs.getString(column);
+//			System.out.println(enavn);
+//		}
+		System.out.println(rs);
 		return rs;
 	}
 }
