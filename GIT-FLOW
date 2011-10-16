@@ -18,3 +18,35 @@ git add nyfil.txt
 git push origin database
 #sigurd kan da bare kjøre en git pull for å hente mine forandringer
 
+
+  Atomic evolution using Git
+
+	STEP 1: Check status quo
+	git status
+
+	STEP 2: Prepare developement
+	git checkout -b dev master
+	git checkout -b newfeature dev
+
+	STEP 3: Stage file
+	git add file
+
+	<hack...hack...hack>
+
+	STEP 4: Code review and staging changes
+	git diff
+	git add --patch
+	or
+	git stash --keep-index
+	git stash pop
+
+	STEP 5: Commit
+	git commit -m "a non-trivial change"
+
+	<repeat STEP 5 until feature is implemented>
+
+	STEP 6: Merge
+	git checkout dev
+	git merge --no-ff newfeature
+	git branch -d newfeature
+
