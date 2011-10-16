@@ -18,7 +18,7 @@ INSERT INTO employee (forename, lastname, username)
 	values ('Morten', 'Noddeland', 'mortnod');
 
 
-INSERT INTO orderss (status)
+INSERT INTO orders (status)
 	values ('Levert av bud');
 INSERT INTO orders (status)
 	values ('Levert av bud');
