@@ -13,6 +13,9 @@ public class ManageOrder {
 	public static void addProductToOrder(Order order, Product product, int quantity){
 		order.addProductToOrder(product, quantity);
 	}
+	public static void  addOneMoreProductToOrdre(Order order, Product product){
+		addProductToOrder(order, product, 1);
+	}
 	
 	public static void setOrderIntoDatabase(Order order){
 		order.addOrderToDatabase();
