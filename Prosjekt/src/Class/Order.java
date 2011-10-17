@@ -2,6 +2,7 @@ package Class;
 
 import java.sql.SQLException;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 
 import Database.Database;
@@ -9,18 +10,33 @@ import Database.Database;
 public class Order {
 	
 	private Customer customer;
-	private HashMap<Product, Integer> products;
+	private HashMap<Product, Integer> productsInOrder;
 	private String status;
 	private String idorder;
 	
 	public Order(Customer customer, HashMap<Product, Integer> products, String status){
 		this.customer = customer;
-		this.products = products;
+		this.productsInOrder = products;
 		this.status = status;
 	}
 	
 	public Order(Customer customer){
 		this.customer = customer;
+	}
+	public HashMap<Product, Integer> getProductsFromOrdre(){
+		return this.productsInOrder;
+	}
+	
+	public double getOrderTotalPrice(Order order){
+		double totalprice = 0;
+	    Iterator it = productsInOrder.entrySet().iterator();
+	    while(it.hasNext()){
+	    	Product p = (Product) it.next();
+	    	int quantity = productsInOrder.get(p);	
+	        totalprice += p.getPrice()*quantity;
+	    	
+	    }
+		return totalprice;
 	}
 	
 	public void addOrderToDatabase(){
@@ -35,7 +51,7 @@ public class Order {
 	}
 	
 	public void addProductToOrder(Product product, int quantity){
-		products.put(product, quantity);
+		productsInOrder.put(product, quantity);
 	}
 	
 	public void setStatus(String status){
@@ -50,7 +66,6 @@ public class Order {
 		}
 		
 	}
-	
 	
 	
 

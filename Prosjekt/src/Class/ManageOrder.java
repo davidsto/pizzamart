@@ -17,5 +17,6 @@ public class ManageOrder {
 	public static void setOrderIntoDatabase(Order order){
 		order.addOrderToDatabase();
 	}
+	
 
 }
