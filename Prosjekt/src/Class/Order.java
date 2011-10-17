@@ -34,9 +34,14 @@ public class Order {
 	    	Product p = (Product) it.next();
 	    	int quantity = productsInOrder.get(p);	
 	        totalprice += p.getPrice()*quantity;
-	    	
 	    }
 		return totalprice;
+	}
+	
+	public int getProductQuanta(Product product){
+	    if(productsInOrder.containsKey(product))
+	    	return productsInOrder.get(product);
+	    return 0;
 	}
 	
 	public void addOrderToDatabase(){
