@@ -51,6 +51,8 @@ public class NewOrderForm extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Ny ordre");
+        
+        searchField.setText("Navn/tlf");
 
         newOrderLabel.setFont(new java.awt.Font("Tahoma", 0, 36));
         newOrderLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);

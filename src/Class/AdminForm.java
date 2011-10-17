@@ -210,6 +210,9 @@ public class AdminForm extends javax.swing.JFrame {
         }
         
         ManageEmployee.addNewEmployee(username, firstname, lastname);
+        this.usernameField.setText("");
+        this.firstNameField.setText("");
+        this.lastNameField.setText("");
     }                                                 
 
     /**
