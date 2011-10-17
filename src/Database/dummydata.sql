@@ -29,7 +29,7 @@ INSERT INTO orders (status)
 INSERT INTO orders (status)
 	values ('hos baker');
 INSERT INTO orders (status)
-	values ('hos baker');¨
+	values ('hos baker');
 INSERT INTO orders (status)
 	values ('avventer ledig baker');
 INSERT INTO orders (status)
