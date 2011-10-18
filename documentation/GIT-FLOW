@@ -18,7 +18,7 @@ git add nyfil.txt
 git push origin database
 #sigurd kan da bare kjøre en git pull for å hente mine forandringer
 
- 
+
   Atomic evolution using Git
 
 	STEP 1: Check status quo
