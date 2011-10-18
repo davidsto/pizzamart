@@ -31,61 +31,70 @@ public class NewOrder2Form extends javax.swing.JFrame {
     private void initComponents() {
 
         newOrderLabel = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton8 = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        jButton13 = new javax.swing.JButton();
-        jLabel14 = new javax.swing.JLabel();
-        jButton14 = new javax.swing.JButton();
-        jLabel15 = new javax.swing.JLabel();
+        productBari = new javax.swing.JButton();
+        productGenoa = new javax.swing.JButton();
+        productCocacola = new javax.swing.JButton();
+        productWater = new javax.swing.JButton();
+        bariCounter = new javax.swing.JLabel();
+        genoaCounter = new javax.swing.JLabel();
+        waterCounter = new javax.swing.JLabel();
+        CocacolaCounter = new javax.swing.JLabel();
+        productSourCream = new javax.swing.JButton();
+        sourCreamCounter = new javax.swing.JLabel();
+        productGarlic = new javax.swing.JButton();
+        garlicCounter = new javax.swing.JLabel();
+        sendButton = new javax.swing.JButton();
+        backButon = new javax.swing.JButton();
+        totalPriceLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        newOrderLabel.setFont(new java.awt.Font("Tahoma", 0, 36));
+        newOrderLabel.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         newOrderLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         newOrderLabel.setText("NY ORDRE");
 
-        jButton1.setText("PIZZA 1");
-        jButton1.setPreferredSize(new java.awt.Dimension(100, 23));
+        productBari.setText("PIZZA BARI");
+        productBari.setPreferredSize(new java.awt.Dimension(100, 23));
 
-        jButton2.setText("PIZZA 2");
-        jButton2.setActionCommand("PIZZA 2");
-        jButton2.setPreferredSize(new java.awt.Dimension(100, 23));
+        productGenoa.setText("PIZZA GENOA");
+        productGenoa.setPreferredSize(new java.awt.Dimension(100, 23));
 
-        jButton5.setText("COCA-COLA");
-        jButton5.setPreferredSize(new java.awt.Dimension(100, 23));
+        productCocacola.setText("COCA-COLA");
+        productCocacola.setPreferredSize(new java.awt.Dimension(100, 23));
 
-        jButton8.setText("VANN");
-        jButton8.setPreferredSize(new java.awt.Dimension(100, 23));
+        productWater.setText("VANN");
+        productWater.setPreferredSize(new java.awt.Dimension(100, 23));
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 14));
-        jLabel2.setText("0");
+        bariCounter.setFont(new java.awt.Font("Tahoma", 1, 14));
+        bariCounter.setText("0");
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 14));
-        jLabel3.setText("0");
+        genoaCounter.setFont(new java.awt.Font("Tahoma", 1, 14));
+        genoaCounter.setText("0");
 
-        jLabel6.setFont(new java.awt.Font("Tahoma", 1, 14));
-        jLabel6.setText("0");
+        waterCounter.setFont(new java.awt.Font("Tahoma", 1, 14));
+        waterCounter.setText("0");
 
-        jLabel9.setFont(new java.awt.Font("Tahoma", 1, 14));
-        jLabel9.setText("0");
+        CocacolaCounter.setFont(new java.awt.Font("Tahoma", 1, 14));
+        CocacolaCounter.setText("0");
 
-        jButton13.setText("RØMME");
-        jButton13.setPreferredSize(new java.awt.Dimension(100, 23));
+        productSourCream.setText("RØMME");
+        productSourCream.setPreferredSize(new java.awt.Dimension(100, 23));
 
-        jLabel14.setFont(new java.awt.Font("Tahoma", 1, 14));
-        jLabel14.setText("0");
+        sourCreamCounter.setFont(new java.awt.Font("Tahoma", 1, 14));
+        sourCreamCounter.setText("0");
 
-        jButton14.setText("HVITLØK");
-        jButton14.setPreferredSize(new java.awt.Dimension(100, 23));
+        productGarlic.setText("HVITLØK");
+        productGarlic.setPreferredSize(new java.awt.Dimension(100, 23));
 
-        jLabel15.setFont(new java.awt.Font("Tahoma", 1, 14));
-        jLabel15.setText("0");
+        garlicCounter.setFont(new java.awt.Font("Tahoma", 1, 14));
+        garlicCounter.setText("0");
+
+        sendButton.setText("Fullfør");
+
+        backButon.setText("Tilbake");
+
+        totalPriceLabel.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        totalPriceLabel.setText("Pris: 1337.00");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -93,65 +102,79 @@ public class NewOrder2Form extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(184, 184, 184)
-                .addComponent(newOrderLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 542, Short.MAX_VALUE)
+                .addComponent(newOrderLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 691, Short.MAX_VALUE)
                 .addGap(209, 209, 209))
             .addGroup(layout.createSequentialGroup()
                 .addGap(105, 105, 105)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel9))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jButton13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel14)))
+                        .addComponent(productBari, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(bariCounter)
                         .addGap(86, 86, 86)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jButton14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel15))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel6))))
+                        .addComponent(productGenoa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(genoaCounter)
+                        .addContainerGap())
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel2)
-                        .addGap(86, 86, 86)
-                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel3)))
-                .addContainerGap(518, Short.MAX_VALUE))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(backButon, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(productCocacola, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(CocacolaCounter))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(productSourCream, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(sourCreamCounter)))
+                                .addGap(86, 86, 86)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(productWater, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(waterCounter))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(productGarlic, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(garlicCounter)))
+                                .addGap(83, 83, 83)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(totalPriceLabel)
+                        .addGap(249, 249, 249)
+                        .addComponent(sendButton)
+                        .addGap(176, 176, 176))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(29, 29, 29)
                 .addComponent(newOrderLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(113, 113, 113)
+                .addGap(116, 116, 116)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel2)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel3))
-                .addGap(81, 81, 81)
+                    .addComponent(productBari, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(bariCounter)
+                    .addComponent(productGenoa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(genoaCounter))
+                .addGap(78, 78, 78)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel9)
-                    .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel6))
+                    .addComponent(productCocacola, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(CocacolaCounter)
+                    .addComponent(productWater, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(waterCounter))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 79, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel14)
-                    .addComponent(jButton14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel15))
-                .addGap(161, 161, 161))
+                    .addComponent(productSourCream, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(sourCreamCounter)
+                    .addComponent(productGarlic, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(garlicCounter))
+                .addGap(103, 103, 103)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(backButon)
+                    .addComponent(sendButton)
+                    .addComponent(totalPriceLabel))
+                .addGap(35, 35, 35))
         );
 
         pack();
@@ -193,18 +216,21 @@ public class NewOrder2Form extends javax.swing.JFrame {
         });
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton13;
-    private javax.swing.JButton jButton14;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton8;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel9;
+    private javax.swing.JLabel CocacolaCounter;
+    private javax.swing.JButton backButon;
+    private javax.swing.JLabel bariCounter;
+    private javax.swing.JLabel garlicCounter;
+    private javax.swing.JLabel genoaCounter;
     private javax.swing.JLabel newOrderLabel;
+    private javax.swing.JButton productBari;
+    private javax.swing.JButton productCocacola;
+    private javax.swing.JButton productGarlic;
+    private javax.swing.JButton productGenoa;
+    private javax.swing.JButton productSourCream;
+    private javax.swing.JButton productWater;
+    private javax.swing.JButton sendButton;
+    private javax.swing.JLabel sourCreamCounter;
+    private javax.swing.JLabel totalPriceLabel;
+    private javax.swing.JLabel waterCounter;
     // End of variables declaration//GEN-END:variables
 }

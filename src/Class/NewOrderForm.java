@@ -1,4 +1,7 @@
 package Class;
+
+import javax.swing.JOptionPane;
+
 /*
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
@@ -51,8 +54,6 @@ public class NewOrderForm extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Ny ordre");
-        
-        searchField.setText("Navn/tlf");
 
         newOrderLabel.setFont(new java.awt.Font("Tahoma", 0, 36));
         newOrderLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -207,7 +208,80 @@ public class NewOrderForm extends javax.swing.JFrame {
 
         MainMenuForm form2 = new MainMenuForm();         this.setVisible(false);         form2.setVisible(true);     }                                          
 
-    private void sendButtonActionPerformed(java.awt.event.ActionEvent evt) {                                           
+    private void sendButtonActionPerformed(java.awt.event.ActionEvent evt) {
+    	
+    	//------------------------------------------------------------------------------
+    	//start
+    	//author: Ole
+    	//------------------------------------------------------------------------------
+    	
+    	
+    	/*
+    	 * Adds a customer.
+    	 * In the future, we need to implement the search field.
+    	 * 
+    	 * Maybe we should use a method for this?
+    	 */
+    	
+    	//Declare variables
+    	String firstName, lastName, address, zipCode, postalAddress, phoneNumber;
+    	
+    	//Assign values to the variables
+    	try {
+    		firstName = this.firstNameField.getText();
+        	} catch (Exception e) {
+        		JOptionPane.showMessageDialog(this, "Bad text", "Error", JOptionPane.ERROR_MESSAGE);
+        		return;
+        	}
+    	
+    	try {
+    		lastName = this.lastNameField.getText();
+        	} catch (Exception e) {
+        		JOptionPane.showMessageDialog(this, "Bad text", "Error", JOptionPane.ERROR_MESSAGE);
+        		return;
+        	}
+    	
+    	try {
+    		address = this.addressField.getText();
+        	} catch (Exception e) {
+        		JOptionPane.showMessageDialog(this, "Bad text", "Error", JOptionPane.ERROR_MESSAGE);
+        		return;
+        	}
+
+    	try {
+    		zipCode = this.zipCodeField.getText();
+        	} catch (Exception e) {
+        		JOptionPane.showMessageDialog(this, "Bad text", "Error", JOptionPane.ERROR_MESSAGE);
+        		return;
+        	}
+    	
+    	//Variable not used by the controller. Do we need it?
+    	try {
+    		postalAddress = this.postalAddressField.getText();
+        	} catch (Exception e) {
+        		JOptionPane.showMessageDialog(this, "Bad text", "Error", JOptionPane.ERROR_MESSAGE);
+        		return;
+        	}
+    	
+    	try {
+    		phoneNumber = this.phoneNumberField.getText();
+        	} catch (Exception e) {
+        		JOptionPane.showMessageDialog(this, "Bad text", "Error", JOptionPane.ERROR_MESSAGE);
+        		return;
+        	}
+    	
+    	
+    	//Create the customer
+    	Customer customer = ManageOrder.addNewCustomer(firstName, lastName, address, zipCode, phoneNumber);
+    	
+    	Order order = ManageOrder.addNewOrder(customer);
+    	
+    	
+    	
+    	//------------------------------------------------------------------------------
+    	//end
+    	//author: Ole
+    	//------------------------------------------------------------------------------
 
         NewOrder2Form form2 = new NewOrder2Form();         this.setVisible(false);         form2.setVisible(true);     }                                          
 
